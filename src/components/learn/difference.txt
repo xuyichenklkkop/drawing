@@ -1,0 +1,15 @@
+vue3:
+1.当v-if 和v-for同时使用 v-if 优先级大于 v-for了
+2.在 v-for中使用 ref 不会自动返回对应Dom元素了，而是需要在methods中创建自定义方法了，如：setItemRef(el) { }
+详细教程：10分30秒的进度
+3.在2中$children访问的是直接子组件。3中没有$children属性，已经被移除，建议直接用$refs
+https://www.bilibili.com/video/BV1aU4y1U7Gv?p=2&vd_source=ad17a1b7e7d993c089c5157b97c33297
+
+
+4.setup,组合式api:
+1.reactive 用于响应式数据
+2.toRefs 用于将响应式对象转为普通对象
+6.toRaw,markRaw 用于将reactive对象转为普通对象
+
+tips：
+vue2 使用Object.defineProperty(obj, key, descriptor)来实现响应式，vue3使用Proxy来实现响应式
